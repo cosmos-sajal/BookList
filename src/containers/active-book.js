@@ -8,6 +8,10 @@ class ActiveBook extends Component {
 	}
 
 	render() {
+		if (!this.props.activeBook) {
+			return <div>Select a book to get started</div>;
+		}
+		
 		return(
 			<div>{this.props.activeBook.title}</div>
 		);
